@@ -1,0 +1,15 @@
+{
+  "name": "demo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start:dev": "export NODE_ENV=development || SET \"NODE_ENV=development\" && supervisor ./bin/www",
+    "start:sta": "export NODE_ENV=staging || SET \"NODE_ENV=staging\" && pm2 start ./bin/www --name demo-sta",
+    "start:pro": "export NODE_ENV=production || SET \"NODE_ENV=production\" && pm2 start ./bin/www --name demo-pro",
+    "debug": "export NODE_ENV=development || SET \"NODE_ENV=development\" && node --inspect-brk=9229 ./bin/www"
+  },
+  "dependencies": {
+    "express": "~4.16.1",
+    "log4js": "^3.0.5"
+  }
+}
