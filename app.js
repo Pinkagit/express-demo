@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const httpLogger = require('./config/log').httpLogger;
-global.logger = require('./config/log').logger;
 
 // router
 const indexRouter = require('./routes/index');

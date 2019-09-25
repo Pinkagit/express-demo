@@ -7,7 +7,7 @@ log4js.configure({
         //设置控制台输出 （默认日志级别是关闭的（即不会输出日志））
         out: { type: 'console' },
         //设置每天：以日期为单位,数据文件类型，dataFiel   注意设置pattern，alwaysIncludePattern属性
-        allLog: { type: 'dateFile', filename: './logs/all', pattern: '-yyyy-MM-dd.log', daysToKeep: 10, alwaysIncludePattern: true },
+        allLog: { type: 'dateFile', filename: './logs/all', pattern: '-yyyy-MM-dd.log', daysToKeep: 5, alwaysIncludePattern: true },
 
         //所有日志记录，文件类型file   文件最大值maxLogSize 单位byte (B->KB->M) backups:备份的文件个数最大值,最新数据覆盖旧数据
         // allLog: { type: 'file', filename: './log/all.log', keepFileExt: true, maxLogSize: 10485760, backups: 3 },
@@ -22,7 +22,7 @@ log4js.configure({
     //不同等级的日志追加到不同的输出位置：appenders: ['out', 'allLog']  categories 作为getLogger方法的键名对应
     categories: {
         //appenders:采用的appender,取上面appenders项,level:设置级别
-        http: { appenders: ['out', 'httpLog'], level: "debug" },
+        http: { appenders: ['out', 'httpLog'], level: "warn" },
         default: { appenders: ['out', 'allLog', 'error'], level: 'debug' }, //error写入时是经过筛选后留下的
     },
     replaceConsole: true
