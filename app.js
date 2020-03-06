@@ -16,9 +16,9 @@ app.use(httpLogger);
 app.use('/', express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 
-// catch 404 and forward to error handler
+// catch 404
 app.use(function (req, res, next) {
-	res.status(404).send('Sorry cant find that!')
+    res.sendFile(path.resolve(__dirname, './public/index.html'))
 });
 
 // error handler
