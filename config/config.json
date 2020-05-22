@@ -1,6 +1,10 @@
 {
     "development": {
-        "PORT": 3002
+        "PORT": 3003,
+        "MONGO": {
+            "url": "localhost/demo",
+            "mongoOptions": {}
+        }
     },
     "staging": {
         "PORT": 8001
