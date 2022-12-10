@@ -9,7 +9,7 @@
     "debug": "export NODE_ENV=development || SET \"NODE_ENV=development\" && node --inspect-brk=9229 ./bin/www"
   },
   "dependencies": {
-    "express": "~4.16.1",
+    "express": "~4.17.3",
     "log4js": "^3.0.5",
     "mongoose": "^5.9.15"
   }
